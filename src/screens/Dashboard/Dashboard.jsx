@@ -221,7 +221,7 @@ const Dashboard = () => {
                 alt={currentStudentData.name}
               />
               <div className={styles.modalHeaderInfo}>
-                <Title level={4} style={{ margin: 0, color: 'var(--text-color)' }}>
+                <Title level={4} style={{ margin: 0}}>
                   Student Observation
                 </Title>
                 <Title level={5} style={{ margin: '4px 0 0', color: 'var(--primary-color)' }}>

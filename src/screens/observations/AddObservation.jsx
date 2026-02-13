@@ -181,7 +181,12 @@ const AddObservation = () => {
     <div className={styles.container}>
       {/* Header Info Card */}
       <Card className={styles.infoCard}>
-        <Descriptions column={{ xs: 1, sm: 3 }} size="middle">
+        <Descriptions 
+          column={{ xxl: 3, xl: 3, lg: 3, md: 2, sm: 2, xs: 1 }} 
+          size="middle"
+          layout="horizontal"
+          className={styles.descriptions}
+        >
           <Descriptions.Item label="Student Name"><Text strong>{student.name}</Text></Descriptions.Item>
           <Descriptions.Item label="Teacher Name"><Text strong>{teacherName}</Text></Descriptions.Item>
           <Descriptions.Item label="Date"><Text strong>{today}</Text></Descriptions.Item>

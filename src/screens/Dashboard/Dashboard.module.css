@@ -133,7 +133,7 @@
 .observationModal :global(.ant-modal-content) {
   border-radius: 12px;
   overflow: hidden;
-  background-color: var(--panel-bg);
+  background-color: var(--panel-bg) !important;
   color: var(--text-color);
   box-shadow: var(--box-shadow);
 }
@@ -151,28 +151,28 @@
 }
 
 /* Descriptions theme overrides */
-.observationModal :global(.ant-descriptions-view) {
+/* .observationModal :global(.ant-descriptions-view) {
   border-color: var(--bg-color) !important;
-}
+} */
 
-.observationModal :global(.ant-descriptions-item-label) {
+/* .observationModal :global(.ant-descriptions-item-label) {
   background-color: var(--bg-color) !important;
   color: var(--text-color) !important;
-}
+} */
 
-.observationModal :global(.ant-descriptions-item-content) {
+/* .observationModal :global(.ant-descriptions-item-content) {
   background-color: var(--panel-bg) !important;
   color: var(--text-color) !important;
-}
+} */
 
-.observationModal :global(.ant-descriptions-row) {
-  border-color: var(--bg-color) !important;
-}
+  /* .observationModal :global(.ant-descriptions-row) {
+    border-color: var(--bg-color) !important;
+  }
 
-.observationModal :global(.ant-descriptions-item-label),
-.observationModal :global(.ant-descriptions-item-content) {
-  border-inline-end-color: var(--bg-color) !important;
-}
+  .observationModal :global(.ant-descriptions-item-label),
+  .observationModal :global(.ant-descriptions-item-content) {
+    border-inline-end-color: var(--bg-color) !important;
+  } */
 
 .modalBody {
   padding: 4px 0;
@@ -199,9 +199,9 @@
   flex: 1;
 }
 
-.modalHeaderInfo :global(.ant-typography) {
+/* .modalHeaderInfo :global(.ant-typography) {
   color: var(--text-color);
-}
+} */
 
 .panelsColumn {
   display: flex;
@@ -212,7 +212,7 @@
 
 /* ─── Collapsible Sections ─── */
 .collapsibleSection {
-  border: 1px solid var(--bg-color);
+  /* border: 1px solid var(--bg-color); */
   border-radius: var(--border-radius);
   overflow: hidden;
 }
@@ -222,7 +222,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 16px;
-  background-color: var(--bg-color);
+  background-color: #f3f4f6;
   cursor: pointer;
   user-select: none;
   transition: background-color 0.2s ease;
@@ -235,7 +235,7 @@
 .collapsibleTitle {
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--text-color);
+  color: #1f2937;
 }
 
 .chevron {
@@ -260,7 +260,7 @@
 
 .collapsibleContent {
   padding: 12px 16px;
-  background-color: var(--panel-bg);
+  background-color: #ffffff;
 }
 
 .modalFooter {
