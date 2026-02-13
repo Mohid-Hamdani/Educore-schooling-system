@@ -1,0 +1,279 @@
+/* Dashboard Container */
+.container {
+  padding: 20px 0;
+}
+
+/* Filter Row */
+.filterRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  background-color: var(--panel-bg);
+  border: 1px solid #d1d5db;
+  border-radius: 40px;
+  padding: 4px 8px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+[data-theme='dark'] .filterRow {
+  border-color: #374151;
+}
+
+.filterRow:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.searchInput {
+  flex: 7;
+  padding: 8px 16px;
+  border: none !important;
+  font-size: 1rem;
+  outline: none;
+  background-color: transparent !important;
+  color: var(--text-color);
+  box-shadow: none !important;
+}
+
+.separator {
+  width: 1px;
+  height: 24px;
+  background-color: #d1d5db;
+  margin: 0 8px;
+}
+
+[data-theme='dark'] .separator {
+  background-color: #4b5563;
+}
+
+.gradeSelect {
+  flex: 3;
+  padding: 8px 16px;
+  border: none !important;
+  font-size: 1rem;
+  outline: none;
+  background-color: transparent !important;
+  color: var(--text-color);
+  cursor: pointer;
+  box-shadow: none !important;
+  appearance: auto;
+}
+
+
+/* Dynamic Heading */
+.heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+
+/* Student Card */
+.studentCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  background: var(--list-gradient);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.studentCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.studentPhoto {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.studentName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin: 0 0 4px;
+  text-align: center;
+}
+
+.observationDate {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .filterRow {
+    flex-direction: column;
+  }
+
+  .searchInput,
+  .gradeSelect {
+    flex: unset;
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 1.2rem;
+  }
+}
+
+/* ─── Observation Modal (Theme-aware) ─── */
+.observationModal :global(.ant-modal-content) {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+  box-shadow: var(--box-shadow);
+}
+
+.observationModal :global(.ant-modal-close) {
+  color: var(--secondary-color);
+}
+
+.observationModal :global(.ant-modal-close:hover) {
+  color: var(--text-color);
+}
+
+.observationModal :global(.ant-modal-footer) {
+  border-top: 1px solid var(--bg-color);
+}
+
+/* Descriptions theme overrides */
+.observationModal :global(.ant-descriptions-view) {
+  border-color: var(--bg-color) !important;
+}
+
+.observationModal :global(.ant-descriptions-item-label) {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.observationModal :global(.ant-descriptions-item-content) {
+  background-color: var(--panel-bg) !important;
+  color: var(--text-color) !important;
+}
+
+.observationModal :global(.ant-descriptions-row) {
+  border-color: var(--bg-color) !important;
+}
+
+.observationModal :global(.ant-descriptions-item-label),
+.observationModal :global(.ant-descriptions-item-content) {
+  border-inline-end-color: var(--bg-color) !important;
+}
+
+.modalBody {
+  padding: 4px 0;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--bg-color);
+}
+
+.modalStudentPhoto {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  flex-shrink: 0;
+}
+
+.modalHeaderInfo {
+  flex: 1;
+}
+
+.modalHeaderInfo :global(.ant-typography) {
+  color: var(--text-color);
+}
+
+.panelsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+/* ─── Collapsible Sections ─── */
+.collapsibleSection {
+  border: 1px solid var(--bg-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.collapsibleHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: var(--bg-color);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.collapsibleHeader:hover {
+  filter: brightness(1.1);
+}
+
+.collapsibleTitle {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.chevron {
+  font-size: 12px;
+  color: var(--secondary-color);
+  transition: transform 0.25s ease-in-out;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.collapsibleBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+
+.collapsibleBodyOpen {
+  max-height: 300px;
+}
+
+.collapsibleContent {
+  padding: 12px 16px;
+  background-color: var(--panel-bg);
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+@media (max-width: 640px) {
+  .modalHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
