@@ -3,7 +3,7 @@ import { AUTH_START, AUTH_SUCCESS, AUTH_FAIL, LOGOUT } from '../actions/authActi
 const initialState = {
   user: null,
   isAuthenticated: false,
-  loading: false,
+  loading: true,
   error: null
 };
 
